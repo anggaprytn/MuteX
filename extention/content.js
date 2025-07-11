@@ -1,15 +1,19 @@
+import { loadWords } from "./shared/words.js";
+
 let isEnabled = true;
 let deleteMode = true;
 let blockedWords = [];
 let blockedCount = 0;
 
 chrome.storage.local.get(
-  ["isEnabled", "deleteMode", "blockedWords", "blockedCount"],
-  (result) => {
-    isEnabled = result.isEnabled !== false;
-    deleteMode = result.deleteMode !== false;
-    blockedWords = result.blockedWords || ["s.shopee.co.id", "s.lazada.co.id"];
-    blockedCount = result.blockedCount || 0;
+  ["isEnabled", "deleteMode", "blockedCount"],
+  async (r) => {
+    isEnabled = r.isEnabled ?? true;
+    deleteMode = r.deleteMode ?? true;
+    blockedCount = r.blockedCount ?? 0;
+
+    blockedWords = await loadWords();
+    startObserver();
   }
 );
 
