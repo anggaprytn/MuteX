@@ -1,35 +1,29 @@
-# MuteX Chrome Extension
+# MuteX
 
-MuteX is a Chrome extension that automatically mutes tweets containing affiliate links such as `s.shopee.co.id`, `s.lazada.co.id`, and others you define.
+MuteX hides tweets with affiliate links like `s.shopee.co.id` or `s.lazada.co.id`. You can set your own blocked keywords.
 
 ## Features
 
-- Automatically detect and mute affiliate tweets
-- Option to blur content instead of deleting
-- Configurable blocked keywords via popup
+- Auto-hide tweets with blocked links
+- Blur or delete mode
+- Edit keywords from popup
 
-## Installation
+## Install
 
-1. Clone or download this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable "Developer mode" (top right)
-4. Click "Load unpacked" and select the project folder
-5. Done
+1. Download or clone this repo
+2. Open `chrome://extensions/`
+3. Turn on **Developer mode**
+4. Click **Load unpacked**, pick this folder
 
-## Usage
+## Use
 
-1. Click the extension icon
-2. Enable or disable the blocker
-3. Edit the list of blocked keywords (comma separated)
-4. Choose between "Blur" or "Delete" mode
-5. Tweets matching any keyword will be automatically muted
-
-## Customization
-
-You can edit the default blocked domains in `popup.js` or from the popup interface after loading the extension.
+1. Click the MuteX icon
+2. Turn on/off the blocker
+3. Set keywords (comma-separated)
+4. Choose blur or delete
 
 ## Notes
 
-- The extension monitors dynamic tweet loading while scrolling
-- Tweets are never permanently deleted from your account or Twitter
-- This only affects tweets _you_ see on your timeline
+- Only hides tweets you see
+- Doesn’t delete anything from Twitter
+- Works while scrolling
