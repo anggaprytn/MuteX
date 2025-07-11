@@ -7,7 +7,6 @@ MuteX is a Chrome extension that automatically mutes tweets containing affiliate
 - Automatically detect and mute affiliate tweets
 - Option to blur content instead of deleting
 - Configurable blocked keywords via popup
-- Works on both `x.com` and `twitter.com`
 
 ## Installation
 
